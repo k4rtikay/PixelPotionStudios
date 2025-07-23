@@ -13,8 +13,8 @@
     --accent-color: #285b12;
 }
 
-div, li{
-    border: 1px red solid;
+body{
+    background: url(assets/lightcave.png);
 }
 
 main{
@@ -28,7 +28,6 @@ header{
     height: 80px;
     justify-content: space-between;
     padding: 10px;
-    border: 2px red solid;
 }
 
 h1{
@@ -51,7 +50,8 @@ h1{
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    border-radius: 16px;
+    padding: 10px;
+    max-height: 330px;
 }
 
 .notificationContent{
@@ -63,11 +63,13 @@ h1{
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    margin: 5px;
     border-radius: 16px;
+    background-color: var(--item-background);
 }
 
 .bignotifImage{
-    width: 250px;
+    width: 200px;
     height: auto;
     border-radius: 12px;
     border: 3px solid #E3DF6D;
@@ -88,14 +90,16 @@ h1{
 .smallNotif{
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .notif{
     padding: 5px;
     display: flex;
-    margin: 5px;
     border-radius: 16px;
     align-items: center;
+    background-color: var(--item-background);
+    min-width: 350px;
 }
 
 .notifImage{
@@ -127,8 +131,9 @@ h1{
 
 li{
     border-radius: 12px;
-    padding: 14px;
+    padding: 10px;
     margin-bottom: 12px;
+    background: var(--item-background);
 }
 
 .bugTracker,.spotlight{
@@ -147,5 +152,12 @@ li{
 
 .guildHall ol{
     list-style-type: none;
+}
+
+.contentCard{
+    background: var(--card-background);
+    border-radius: 16px;
+    margin: 5px;
+
 }
 
