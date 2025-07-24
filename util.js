@@ -1,7 +1,7 @@
 const bugData = {
-  open: 12,
-  inProgress: 25,
-  fixed: 188
+  open: 22,
+  inProgress: 35,
+  closed: 188
 };
 
 const spotlights = [

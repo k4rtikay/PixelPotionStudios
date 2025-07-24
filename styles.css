@@ -209,6 +209,7 @@ p{
     flex-grow: 1;
     min-width: 150px; 
     margin-top: 10px;   
+    overflow: hidden;
 }
 
 .progressBar{
@@ -222,9 +223,9 @@ p{
     font-weight: bold;
 }
 
-.progressBar .open{ background-color: #e34c46;}
-.progressBar .inProgress{ background-color: #f0a033; }
-.progressBar .closed{ background-color: #3fb950; }
+.open{ background-color: #e34c46;   }
+.inProgress{ background-color: #f0a033; }
+.closed{ background-color: #3fb950; }
 
 
 .spotlight{
