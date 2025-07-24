@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root{
@@ -15,6 +14,11 @@
 
 body{
     background: url(assets/lightcave.png);
+    font-family:'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button{
+    cursor: pointer;
 }
 
 main{
@@ -27,11 +31,27 @@ header{
     display: flex;
     height: 80px;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'VT323','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1{
-    margin: 5px;
+header h2{
+    color: #431A09;
+    text-shadow: 
+        -1px -1px 0 #E3DF6D,  
+         1px -1px 0 #E3DF6D,
+        -1px  1px 0 #E3DF6D,
+         1px  1px 0 #E3DF6D;
+}
+
+.headerOptions{
+    color: var(--accent-color);
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.3rem;
+    margin: 0 20px;
 }
 
 .contentPane{
@@ -42,7 +62,13 @@ h1{
 
 .upperRow, .lowerRow{
     display: flex;
+}
+
+.contentCard{
+    background: var(--card-background);
+    border-radius: 16px;
     margin: 5px;
+    padding: 10px;
 }
 
 .notifications{
@@ -50,7 +76,6 @@ h1{
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    padding: 10px;
     max-height: 330px;
 }
 
@@ -111,14 +136,12 @@ h1{
 
 .notifText{
     display: flex;
-    justify-content: center;
-    margin: 5px;
     flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
 }
 
 .patchNotes{
-    padding: 5px;
-    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,6 +157,11 @@ li{
     padding: 10px;
     margin-bottom: 12px;
     background: var(--item-background);
+    font-size: 0.8rem;
+}
+
+p{
+    font-size: 0.9rem;
 }
 
 .bugTracker,.spotlight{
@@ -144,20 +172,120 @@ li{
 .guildHall{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 5px;
-    border-radius: 16px;
+    gap: 10px;
 }
 
 .guildHall ol{
     list-style-type: none;
 }
 
-.contentCard{
-    background: var(--card-background);
-    border-radius: 16px;
-    margin: 5px;
-
+.bugTracker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
 }
+
+.bugTrackerContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.bugCategory{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.progressBarContainer{
+    display: flex;
+    gap: 10px;
+    border: 2px solid white;
+    border-radius: 16px;
+    height: 20px;
+    flex-grow: 1;
+    min-width: 150px; 
+    margin-top: 10px;   
+}
+
+.progressBar{
+    height: 100%;
+    border-radius: 16px;
+}
+
+.count{
+    width: 40px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.progressBar .open{ background-color: #e34c46;}
+.progressBar .inProgress{ background-color: #f0a033; }
+.progressBar .closed{ background-color: #3fb950; }
+
+
+.spotlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.spotlightContainer{
+    display: flex;
+    align-items: center;
+}
+
+.spotlightContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotlight img{
+    width: 250px;
+    height: auto;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    display: block;
+}
+
+.spotlight figcaption{
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    color: var(--accent-color);
+}
+
+.spotlight p{
+    font-size: 0.7rem;
+}
+
+
+.spotlight button{
+    background-color: var(--item-background);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.fa-solid{
+    color: white;
+    display: block;
+    height: auto;
+    width: 50px;
+}
+
 

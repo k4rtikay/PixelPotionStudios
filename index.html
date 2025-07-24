@@ -4,7 +4,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +16,7 @@
 </head>
 <body>
     <header>
-        <span>PixelPotionStudios</span>
+        <h2>PixelPotionStudios</h2>
         <nav>
             <button class="headerOptions">Employee Center</button>
             <button class="headerOptions">News</button>
@@ -21,7 +24,7 @@
         </nav>
     </header>
     <main>
-        <h1 class="greeting">Welcome, Sabine!</h1>
+        <h2 class="greeting">Welcome, Sabine!</h2>
         <div class="contentPane">
             <div class="upperRow">
                 <div class="notifications contentCard">
@@ -42,7 +45,7 @@
                                 <img src="assets/jose-vazquez-UUf5nxhEhAs-unsplash.jpg" alt="People doing yoga by Jose Vazquez on Unsplash" class="notifImage">
                                 <div class="notifText">
                                     <h6>15/06/2025</h6>
-                                    <h5>21 Day Yoga Challenge Starts Next Week</h3>
+                                    <h5>21 Day Yoga Challenge Starts Next Week</h5>
                                 </div>
                             </article>
                             <article class="notif">
@@ -64,8 +67,61 @@
                 </div>
             </div>
             <div class="lowerRow">
-                <div class="bugTracker contentCard"></div>
-                <div class="spotlight contentCard"></div>
+                <div class="bugTracker contentCard">
+                    <h4>Bug Tracker Summary</h4>
+                    <div class="bugTrackerContent">
+                        <div class="bugCategory">
+                            <div>
+                                <span class="label">Open</span>
+                                <span class="count" id="openCount">0</span>
+                            </div>
+                            <div class="progressBarContainer">
+                                <div class="progressBar open"></div>
+                            </div>
+                        </div>
+                        <div class="bugCategory">
+                            <div>
+                                <span class="label">In Progress</span>
+                                <span class="count" id="inProgressCount">0</span>
+                            </div>
+                            <div class="progressBarContainer">
+                                <div class="progressBar inProgress"></div>
+                            </div>
+                        </div>
+                        <div class="bugCategory">
+                            <div>
+                                <span class="label">Closed</span>
+                                <span class="count" id="closedCount">0</span>
+                            </div>
+                            <div class="progressBarContainer">
+                                <div class="progressBar closed"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spotlight contentCard">
+                    <h4>Project Spotlight</h4>
+                    <div class="spotlightContainer">
+                        
+                        <button id="prevSpotlight">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="spotlightContent">
+                            <figure>
+                                <img src="assets/dragons-peak.png" alt="Concept art of a mountain" id="spotlightImage">
+                                <figcaption id="spotlightCaption">"Dragon's Peak" by Elara Vance</figcaption>
+                            </figure>
+                            <p id="spotlightDescription">Initial environmental concept for the 'Whispering Mountains' region.</p>
+                        </div>
+                        <button id="nextSpotlight">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                        </svg>
+                        </button>
+                    </div>
+                </div>
                 <div class="guildHall contentCard">
                     <h4>Guild Hall</h4>
                     <ol>
