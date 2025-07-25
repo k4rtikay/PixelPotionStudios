@@ -5,16 +5,32 @@
 }
 
 :root{
-    --card-background: rgba(157,133,91,0.54);
-    --item-background: rgba(242,223,189,0.54);
+    --card-background: rgba(91, 100, 157, 0.54);
+    --item-background: rgba(189, 215, 242, 0.54);
     --image-border-color: #e3df6d;
     --body-font-color: rgb(27, 27, 27);
-    --accent-color: #285b12;
+    --accent-color: #dbd89b;
+    --bg-image: url(assets/pixelated-sky-background.png);
+    --i: 0;
+}
+
+.dark{
+    --card-background: rgba(53, 54, 59, 0.5);
+    --item-background: rgba(150, 138, 145, 0.56);
+    --image-border-color: #e3df6d;
+    --body-font-color: #D1D5DB;
+    --accent-color: #d3ccd3;
+    --bg-image: url(assets/dusk-sky.png);
+
 }
 
 body{
-    background: url(assets/lightcave.png);
+    background: var(--bg-image);
     font-family:'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body-font-color);
+    transition: background 0.4s ease-in;
+    transition: color 0.2s ease-in;
+    background-position: left;
 }
 
 button{
@@ -52,12 +68,13 @@ header h2{
     font-family: inherit;
     font-size: 1.3rem;
     margin: 0 20px;
+    transition: color 0.2s ease-in;
 }
 
 .contentPane{
     display: flex;
     flex-direction: column;
-    width: 1100px;
+    max-width: 1100px;
 }
 
 .upperRow, .lowerRow{
@@ -69,6 +86,10 @@ header h2{
     border-radius: 16px;
     margin: 5px;
     padding: 10px;
+    animation: fadeInSlideUp 0.5s ease-out forwards;
+    animation-delay: calc(0.15s*var(--i));
+    opacity: 0;
+    transition: background 0.2s ease-in;
 }
 
 .notifications{
@@ -91,6 +112,7 @@ header h2{
     margin: 5px;
     border-radius: 16px;
     background-color: var(--item-background);
+    transition: background 0.2s ease-in;
 }
 
 .bignotifImage{
@@ -125,6 +147,7 @@ header h2{
     align-items: center;
     background-color: var(--item-background);
     min-width: 350px;
+    transition: background 0.2s ease-in;
 }
 
 .notifImage{
@@ -158,6 +181,7 @@ li{
     margin-bottom: 12px;
     background: var(--item-background);
     font-size: 0.8rem;
+    transition: background 0.2s ease-in;
 }
 
 p{
@@ -215,6 +239,8 @@ p{
 .progressBar{
     height: 100%;
     border-radius: 16px;
+    width: 0;
+    transition: width 0.6s ease-in-out;
 }
 
 .count{
@@ -223,9 +249,9 @@ p{
     font-weight: bold;
 }
 
-.open{ background-color: #e34c46;   }
+.open{ background-color: #e34c46; transition: width 0.6s ease-in-out;}
 .inProgress{ background-color: #f0a033; }
-.closed{ background-color: #3fb950; }
+.closed{ background-color: #3fb950;}
 
 
 .spotlight{
@@ -247,6 +273,7 @@ p{
     align-items: center;
     justify-content: center;
     min-width: 375px;
+
 }
 
 .spotlight img{
@@ -255,6 +282,7 @@ p{
     aspect-ratio: 4/3;
     border-radius: 10px;
     display: block;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .spotlight figcaption{
@@ -264,6 +292,7 @@ p{
     text-align: center;
     padding-top: 5px;
     color: var(--accent-color);
+    transition: color 0.2s ease-in;
 }
 
 .spotlight p{
@@ -289,5 +318,63 @@ p{
     height: auto;
     width: 50px;
 }
+
+#switchTheme{
+    vertical-align: center;
+    width: 20px;
+    height: auto;
+}
+
+
+@keyframes fadeInSlideUp {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:1024px){
+    body{
+        margin: 0;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media(max-width:768px){
+    .contentPane{
+        width: 100%;
+        align-items: center;
+    }
+
+    .upperRow,.lowerRow{
+        flex-direction: column;
+    }
+
+    .notificationContent{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .bignotifImage{
+        width: 150px;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .notif{
+        width: 100%;
+    }
+
+}
+
+
 
 
