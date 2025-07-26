@@ -42,4 +42,4 @@ This project is hosted on GitHub pages, you can access the live version at the l
 
 [PixelPotionStudios][def]
 
-[def]: https://example.com
+[def]: https://k4rtikay.github.io/PixelPotionStudios/
