@@ -8,21 +8,21 @@
     --card-background: rgba(91, 100, 157, 0.54);
     --item-background: rgba(189, 215, 242, 0.54);
     --image-border-color: #f9f6949b;
-    --body-font-color: rgb(27, 27, 27);
+    --body-font-color: #1b1b1b;
     --accent-color: #bcd5e9;
     --accent-color-hover:#cdced2;
-    --bg-image: url(assets/pixelated-sky-background.png);
+    --bg-image: url(assets/blue-light-sky.webp);
     --i: 0;
 }
 
 .dark{
-    --card-background: rgba(53, 54, 59, 0.5);
-    --item-background: rgba(150, 138, 145, 0.56);
+    --card-background: rgba(41, 44, 42, 0.5);   
+    --item-background: rgba(39, 98, 58, 0.561);
     --image-border-color: #e3df6d;
     --body-font-color: #D1D5DB;
-    --accent-color: #eaafe5;
-    --accent-color-hover:#2b2a2b;
-    --bg-image: url(assets/dusk-sky.png);
+    --accent-color: #9fd89b;
+    --accent-color-hover:#5b80ef;
+    --bg-image: url(assets/dark-green-sky.webp);
 
 }
 
@@ -30,10 +30,11 @@ body{
     background: var(--bg-image);
     font-family:'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--body-font-color);
-    transition: background 0.4s ease-in;
-    transition: color 0.2s ease-in;
+    transition: background 0.2s ease-in, color 0.2s ease-in;
     background-position: left;
-    overflow: hidden;
+    background-repeat: repeat-x;
+    min-width: 320px;
+    animation: scroll-background 60s linear infinite;
 }
 
 button{
@@ -59,7 +60,9 @@ header{
     font-family: 'VT323','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header h2{
+header p{
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #431A09;
     text-shadow: 
         -1px -1px 0 #E3DF6D,  
@@ -81,12 +84,15 @@ nav{
     font-size: 1.3rem;
     margin: 0 20px;
     transition: color 0.2s ease-in;
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .headerOptions:hover{
-    color: var(--accent-color-hover);
+    color: var(--body-font-color);
     transform: scale(1.05) translateY(-1px);
     transition: 0.2s ease-in-out;
+    background-color: var(--accent-color-hover);
 }
 
 .contentPane{
@@ -94,6 +100,7 @@ nav{
     flex-direction: column;
     max-width: 1100px;
     padding: 0 15px;
+    overflow: hidden;
 }
 
 .upperRow, .lowerRow{
@@ -260,11 +267,12 @@ p{
     text-align: left;
     display: flex;
     flex-direction: column;
+    transition: background 0.2s ease-in, color 0.2s ease-in;
 }
 
 .guildHall li:hover{
     background-color: var(--accent-color-hover);
-    transform: scale(1.01) translateY(-1px);
+    transform: scale(1.03) translateY(-2px);
     transition: all 0.1s linear;
 }
 
@@ -342,6 +350,7 @@ p{
 }
 
 .spotlight img{
+    width: 100%;
     max-width: 250px;
     height: auto;
     aspect-ratio: 4/3;
@@ -370,13 +379,13 @@ p{
     align-items: center;
     background-color: var(--item-background);
     border: none;
-    color: white;
     font-size: 1.5em;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
     padding: 5px;
+    transition: background 0.2s ease-in, color 0.2s ease-in;
 }
 
 .spotlight button:hover{
@@ -414,19 +423,28 @@ p{
     }
 }
 
+@keyframes scroll-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1024px 0; 
+  }
+}
+
+
 @media(max-width:1024px){
+
     body{
         margin: 0;
         min-height: 100vh;
         background-size: cover;
         background-position: center top;
-        background-repeat: no-repeat;
         background-attachment: fixed;
         overflow: auto;
     }
-}
 
-@media(max-width:1024px){
+
     .contentPane{
         width: 100%;
         align-items: center;
@@ -461,6 +479,7 @@ p{
     .headerOptions{
         font-size: 1rem;
         margin: 0 10px;
+        padding: 0;
     }
 
     .spotlight{

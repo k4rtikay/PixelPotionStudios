@@ -64,8 +64,6 @@ function updateBugTracker() {
 
 }
 
-document.addEventListener('DOMContentLoaded', updateBugTracker); //display data when the page loads
-
 //dark mode toggle
 document.querySelector('#switchTheme').addEventListener('click',()=>{
     document.querySelector('body').classList.toggle('dark');
@@ -87,4 +85,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     cards.forEach((card,index)=>{
         card.style.setProperty('--i',index);
     })
+
+    updateBugTracker()
 })

@@ -9,11 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
-    
+    <!-- critical styles -->
     <style>
         body {
         margin: 0;
-        min-height: 100vh;
+        max-height: 100vh;
+        max-width: 100vw;
         background-image: url('assets/pixelated-sky-background.png');
         background-size: cover;
         background-position: center;
@@ -30,7 +31,7 @@
 </head>
 <body>
     <header>
-        <h2>PixelPotionStudios</h2>
+        <p>PixelPotionStudios</p>
         <nav>
             <button class="headerOptions" id="switchTheme"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
             <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
@@ -132,7 +133,7 @@
                         </button>
                         <div class="spotlightContent">
                             <figure>
-                                <img src="assets/dragons-peak.webp" alt="Concept art of a mountain" loading="lazy" id="spotlightImage">
+                                <img src="assets/dragons-peak.webp" alt="Concept art of a mountain" loading="lazy" id="spotlightImage" width="250px" height="190">
                                 <figcaption id="spotlightCaption">"Dragon's Peak" by Eliza Vance</figcaption>
                             </figure>
                             <p id="spotlightDescription">Initial environmental concept for the 'Whispering Mountains' region.</p>
