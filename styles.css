@@ -426,7 +426,7 @@ p{
     }
 }
 
-@media(max-width:868px){
+@media(max-width:1024px){
     .contentPane{
         width: 100%;
         align-items: center;
@@ -463,6 +463,9 @@ p{
         margin: 0 10px;
     }
 
+    .spotlight{
+        width: 100%;
+    }
     
 }
 
