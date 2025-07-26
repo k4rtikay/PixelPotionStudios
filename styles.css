@@ -123,6 +123,7 @@ nav{
 
 .notificationContent{
     display: flex;
+    scrollbar-width: none;
 }
 
 .bigNotif{
@@ -398,10 +399,9 @@ p{
 }   
 
 .upperRow > .contentCard,
-    .lowerRow > .contentCard {
-        max-width: 100%;
-    }
-
+.lowerRow > .contentCard {
+    max-width: 100%;
+}
 
 @keyframes fadeInSlideUp {
     from{
@@ -469,7 +469,7 @@ p{
     
 }
 
-@media(max-width:450px){
+@media(max-width:540px){
 
     .contentPane{
         align-items: center;
