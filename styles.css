@@ -8,9 +8,10 @@
 :root{
     --card-background: rgba(91, 100, 157, 0.54);
     --item-background: rgba(189, 215, 242, 0.54);
-    --image-border-color: #e3df6d;
+    --image-border-color: #f9f6949b;
     --body-font-color: rgb(27, 27, 27);
-    --accent-color: #dbd89b;
+    --accent-color: #bcd5e9;
+    --accent-color-hover:#cdced2;
     --bg-image: url(assets/pixelated-sky-background.png);
     --i: 0;
 }
@@ -20,7 +21,8 @@
     --item-background: rgba(150, 138, 145, 0.56);
     --image-border-color: #e3df6d;
     --body-font-color: #D1D5DB;
-    --accent-color: #d3ccd3;
+    --accent-color: #eaafe5;
+    --accent-color-hover:#2b2a2b;
     --bg-image: url(assets/dusk-sky.png);
 
 }
@@ -32,10 +34,15 @@ body{
     transition: background 0.4s ease-in;
     transition: color 0.2s ease-in;
     background-position: left;
+    overflow: hidden;
 }
 
 button{
     cursor: pointer;
+    border: none;
+    background: none;
+    font-family:'poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--body-font-color);
 }
 
 main{
@@ -75,6 +82,12 @@ nav{
     font-size: 1.3rem;
     margin: 0 20px;
     transition: color 0.2s ease-in;
+}
+
+.headerOptions:hover{
+    color: var(--accent-color-hover);
+    transform: scale(1.05) translateY(-1px);
+    transition: 0.2s ease-in-out;
 }
 
 .contentPane{
@@ -125,19 +138,36 @@ nav{
     transition: background 0.2s ease-in;
 }
 
-.bignotifImage{
-    width: 200px;
-    height: 100px;
-    border-radius: 12px;
-    border: 3px solid #E3DF6D;
-}
-
 .bigNotifTop{
     display: flex;
     margin: 5px;
     gap: 12px;
     align-items: center;
 }
+
+.imageContainer{
+    position: relative;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 2em;
+    opacity: 0.7;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.bignotifImage{
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #E3DF6D;
+} 
 
 .bigNotifText{
     display: flex;
@@ -210,11 +240,25 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .guildHall ol{
     list-style-type: none;
     padding: 0;
+}
+
+.guildHall button{
+    width: 100%;
+    text-align: left;
+}
+
+.guildHall li:hover{
+    background-color: var(--accent-color-hover);
+    transform: scale(1.01) translateY(-1px);
+    transition: all 0.1s linear;
 }
 
 .bugTracker{
@@ -272,7 +316,7 @@ p{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    max-width: 500px;
+    width: 500px;
 }
 
 .spotlightContainer{
@@ -328,6 +372,12 @@ p{
     padding: 5px;
 }
 
+.spotlight button:hover{
+    background-color: var(--accent-color-hover);
+    transform: scale(1.02) translateY(-1px);
+    transition: 0.2s ease-in-out;
+}
+
 .fa-solid{
     color: white;
     display: block;
@@ -337,9 +387,9 @@ p{
 
 #switchTheme{
     vertical-align: center;
-    width: 20px;
+    width: 24px;
     height: auto;
-}
+}   
 
 .upperRow > .contentCard,
     .lowerRow > .contentCard {
@@ -366,6 +416,7 @@ p{
         background-position: center top;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        overflow: auto;
     }
 }
 
