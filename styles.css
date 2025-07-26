@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid lime; */
 }
 
 :root{
@@ -112,14 +111,14 @@ nav{
     animation-delay: calc(0.15s*var(--i));
     opacity: 0;
     transition: background 0.2s ease-in;
+    max-height: 300px;
 }
 
 .notifications{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
-    max-height: 330px;
+    overflow: hidden;
 }
 
 .notificationContent{
@@ -132,7 +131,7 @@ nav{
     align-items: center;
     padding: 10px;
     margin: 5px;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 16px;
     background-color: var(--item-background);
     transition: background 0.2s ease-in;
@@ -173,6 +172,11 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 24px;
+    font-size: 0.9rem;
+}
+
+.bigNotif p{
+    font-size: 0.8rem;
 }
 
 .smallNotif{
@@ -439,6 +443,7 @@ p{
 
     .bignotifImage{
         width: 120px;
+        height: 90px;
     }
 
     .notif{
